@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>example 1</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <div class="container-menu-hidden">
+          <button translate="no" class="open-menu">show</button>
+          <div class="menu-tip hidden"></div>
+          <div class="menu-hidden hidden"></div>
+        </div>
+      </nav>
+    </div>
+    <script type="text/javascript">
+
+      const menuElements = document.querySelectorAll('nav > .container-menu-hidden > div[class^="menu-"]');
+      const btnMenu = document.querySelector('nav > .container-menu-hidden > .open-menu');
+      btnMenu.addEventListener('click',()=>{
+        menuElements.forEach(element => element.classList.toggle('hidden'));
+      })
+    </script>
+  </body>
+</html>
